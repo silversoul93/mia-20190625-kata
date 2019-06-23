@@ -1,0 +1,21 @@
+[
+  {
+    "startingPosition": [
+      -1,
+      -1
+    ],
+    "startingDirection": "S",
+    "commands": [
+      "b",
+      "r",
+      "b"
+    ],
+    "solution": [
+      [
+        0,
+        0
+      ],
+      "W"
+    ]
+  }
+]

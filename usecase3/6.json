@@ -1,0 +1,30 @@
+[
+  {
+    "startingPosition": [
+      0,
+      0
+    ],
+    "startingDirection": "W",
+    "commands": [
+      "b",
+      "b",
+      "r",
+      "f",
+      "r",
+      "f",
+      "l",
+      "f"
+    ],
+    "grid": [
+      2,
+      2
+    ],
+    "solution": [
+      [
+        -2,
+        2
+      ],
+      "N"
+    ]
+  }
+]

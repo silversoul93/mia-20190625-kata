@@ -1,0 +1,34 @@
+[
+  {
+    "startingPosition": [
+      0,
+      0
+    ],
+    "startingDirection": "N",
+    "commands": [
+      "f",
+      "b"
+    ],
+    "grid": [
+      2,
+      2
+    ],
+    "obstacles": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "solution": [
+      [
+        0,
+        0
+      ],
+      "N"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "startingPosition": [
+      0,
+      0
+    ],
+    "startingDirection": "N",
+    "commands": [
+      "b"
+    ],
+    "solution": [
+      [
+        0,
+        -1
+      ],
+      "N"
+    ]
+  }
+]

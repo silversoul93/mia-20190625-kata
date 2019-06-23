@@ -1,0 +1,26 @@
+[
+  {
+    "startingPosition": [
+      0,
+      0
+    ],
+    "startingDirection": "N",
+    "commands": [
+      "l",
+      "f",
+      "l",
+      "f",
+      "l",
+      "f",
+      "l",
+      "f"
+    ],
+    "solution": [
+      [
+        0,
+        0
+      ],
+      "N"
+    ]
+  }
+]
