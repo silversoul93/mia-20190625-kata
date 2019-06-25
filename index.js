@@ -45,11 +45,25 @@ const followInstruction = (instruction, partialResult) => {
       switch (partialResult.direction) {
         case 'N':
         case 'S':
-          partialResult.position[1] += commandsMap[partialResult.direction][command]
+          if (instruction.grid) {
+            const coordinate = partialResult.position[1] + commandsMap[partialResult.direction][command]
+            partialResult.position[1] = Math.abs(coordinate) > instruction.grid[1]
+              ? partialResult.position[1] *= -1
+              : partialResult.position[1] = coordinate
+          } else {
+            partialResult.position[1] += commandsMap[partialResult.direction][command]
+          }
           break
         case 'E':
         case 'W':
-          partialResult.position[0] += commandsMap[partialResult.direction][command]
+          if (instruction.grid) {
+            const coordinate = partialResult.position[0] + commandsMap[partialResult.direction][command]
+            partialResult.position[0] = Math.abs(coordinate) > instruction.grid[0]
+              ? partialResult.position[0] *= -1
+              : partialResult.position[0] = coordinate
+          } else {
+            partialResult.position[0] += commandsMap[partialResult.direction][command]
+          }
           break
       }
     }
@@ -59,13 +73,14 @@ const followInstruction = (instruction, partialResult) => {
 const moveRover = instructions => {
   const result = {}
   instructions.forEach((instruction, index) => {
-    if (index === 0) {
-      result.position = instruction.startingPosition
-    }
+    result.position = instruction.startingPosition
     followInstruction(instruction, result)
   })
   return result
 }
+
+const instructions = require('./usecase3/1.json')
+moveRover(instructions)
 
 module.exports = {
   moveRover,
